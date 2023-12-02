@@ -67,7 +67,7 @@ To deploy this project, run
 ## Authors
 
 - [Bisman Kaur](https://github.com/BKaur20)
-- [Simrata Kaur Kaur](https://github.com/simrata16)
+- [Simrata Kaur](https://github.com/simrata16)
 - [Ekaspreet Kaur](https://github.com/Ekaspreet20)
 - [Harjot Singh](https://github.com/harjot-singh-16)
 
