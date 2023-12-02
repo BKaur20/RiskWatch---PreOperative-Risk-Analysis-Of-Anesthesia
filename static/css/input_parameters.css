@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgb(52, 52, 124);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    z-index: 99;
+}
+
+.welcome{
+    margin:0px;
+    width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    user-select: none;
+    font-weight: 550;
+    text-decoration: none;
+    margin: 0;
+    width: auto;
+    padding: 10px;
+}
+
+.navigation .about,
+.navigation .contact {
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about-us{
+    padding: 50px;
+    width : 50%;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 30px;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccdaed;
+    flex-wrap: wrap;
+}
+
+.container{
+    background-color: #ccdaed;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 0 15px;
+    margin-top: 60px;
+}
+
+.container form{
+    position: relative;
+    margin-top: 30px;
+    min-height: 490px;
+    background-color: #ccdaed;
+}
+
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: rgb(52, 52, 124);
+}
+
+.container form .fields{
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    
+}
+
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 2 - 90px);
+    flex-direction: column;
+    margin: 4px 0;
+
+}
+
+.input-field label{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.input-field input{
+    border: 2px solid rgb(52, 52, 124);
+    font-size: 14px;
+    font-size: 400;
+    color:rgb(129, 129, 129);
+    padding: 0 15px;
+    height: 40px;
+    margin: 8px 0;
+}
+
+.input-field select{
+    border: 2px solid rgb(52, 52, 124);
+    font-size: 14px;
+    font-size: 400;
+    color:rgb(129, 129, 129);
+    padding: 0 15px;
+    height: 40px;
+    margin: 8px 0;
+}
+
+
+.input-field input:is(:ficus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+
+}
+
+.Disclaimer label{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    justify-content: center;
+}
+
+.Disclaimer p{
+  justify-content: center;    
+  color: black;
+  font-size: 15px;
+} 
+
+
+.container form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: rgb(52, 52, 124);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #9c60eb;
+}
+
+form button i{
+    margin: 0 6px;
+}
+
+
+/*
+.container form .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: rgb(52, 52, 124);
+    transition: all 0.3s linear;
+    cursor: pointer;
+
+}
+*/
+@media(max-width: 750px){
+    .container form{
+        overflow-y: scroll;
+    }
+
+    .container form::-webkit-scrollbar{
+        display: none;
+    }
+
+    form .fields .input-field{
+        width: calc(100% / 2- 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+
+footer {
+    color: #0e0e62;
+    width: 100%;
+    position:relative; 
+}
+  
+.footer-content {
+    clear: both;
+    justify-content: center;
+    text-align: center;
+}

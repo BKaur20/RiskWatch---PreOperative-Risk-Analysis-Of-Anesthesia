@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgb(52, 52, 124);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    z-index: 99;
+}
+
+.welcome{
+    margin:0px;
+    width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    user-select: none;
+    font-weight: 550;
+    text-decoration: none;
+    margin: 0;
+    width: auto;
+    padding: 10px;
+}
+
+.navigation .about,
+.navigation .contact {
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg,#f1f1f1,#8cb2e1);
+    flex-wrap: wrap;
+}
+
+.error{
+    color: #cc0000;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.container{
+    margin-top: 100px;
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective: 2700px;
+}
+
+.container .cover{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.container .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #6db5df;
+}
+
+.container .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #6db5df;
+    transform: rotateY(180deg);
+}
+
+
+.container #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+}
+
+.container #flip {
+        display: none;
+}
+
+.container .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 12;
+    backface-visibility: hidden;
+}
+
+.container form{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.container .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-content .login-form, 
+.form-content .signup-form{
+    width: calc(100% / 2 - 25px);
+}
+
+form .form-content .title{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+form .form-content .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: rgb(52, 52, 124);
+}
+
+form .signup-form .title:before{
+    width: 20px;
+}
+
+form .form-content .input-boxes{
+    margin-top: 30px;
+}
+
+form .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgb(52, 52, 124);
+    transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+    border-color:  rgb(52, 52, 124)f;
+
+}
+
+.form-content .input-box i{
+    position: absolute;
+    color: rgb(52, 52, 124);
+    font-size: 17px;
+}
+
+form .form-content .text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+form .form-content .text a{
+    text-decoration: none;
+    color: rgb(52, 52, 124);
+}
+
+form .form-content .text a:hover{
+    text-decoration: underline;
+    color: #9c60eb;
+}
+
+form .form-content .button{
+    color: #fff;
+    margin-top: 30px;
+}
+
+form .form-content .button input{
+    color: #fff;
+    background: rgb(52, 52, 124);
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+form .form-content .button input:hover{
+   background: #9c60eb;
+}
+
+form .form-content label{
+    color: rgb(52, 52, 124);
+}
+
+form .form-content label:hover{
+    color: #9c60eb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer {
+    color: #0e0e62;
+    width: 100%;
+    position:relative; 
+    padding-top: 18px;
+}
+  
+.footer-content {
+    clear: both;
+    justify-content: center;
+    text-align: center;
+}

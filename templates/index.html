@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RiskWatch</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var readMoreBtns = document.getElementsByClassName('btn');
+      
+          for (var i = 0; i < readMoreBtns.length; i++) {
+            readMoreBtns[i].addEventListener('click', function() {
+              var hiddenText = this.previousElementSibling;
+              hiddenText.style.display = 'block';
+              this.style.display = 'none';
+            });
+          }
+        });
+      </script>
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <header>
+      <h2 class="welcome"><img src="{{ url_for('static', filename='images/logo.jpg') }}" width="230" height="60"></h2>
+      <nav class="navigation">
+        <a class="home" href="{{ url_for('index') }}">Home</a>
+        <a class="contact" href="{{ url_for('contact') }}">Contact</a>
+      </nav>
+    </header>
+
+
+
+    <div class="container">
+      <div class="title">
+        <h4><b>Welcome! Lets help you find what you need:</b></h4>
+        <div class="button-container">
+          <a href="{{ url_for('login_register') }}" class="button">Anesthesiologist</a>
+          <a href="{{ url_for('patient') }}" class="button">Patient</a>
+        </div>
+      </div>
+    </div>
+  
+    <section class="about-us">
+
+      <div class="content-section">
+        <p><h1>About Us</h1></p>
+        <p>
+          RiskWatch is an invaluable tool that enhances the preoperative risk analysis of anesthesia. It serves as a valuable resource for healthcare professionals, aiding them in the assessment and evaluation of potential risks associated with administering anesthesia to patients prior to surgery. 
+        </p>
+        <p class="hidden-text">
+          It takes into account various factors such as the patient's age, medical history, current health status, etc. By inputting these variables, it generates patient's risk level based on different parameters, allowing anesthesiologists to make informed decisions and tailor anesthesia plans to individual patients. The analysis helps identify any potential complications, enabling the medical team to take necessary precautions and optimize patient safety during the perioperative period. 
+          By utilizing this advanced technology, healthcare providers can enhance patient care and improve surgical outcomes, ultimately leading to a more efficient and personalized approach to anesthesia management.
+        </p>
+        <a class="btn">Read more...</a>
+      </div>
+
+      <div class="overlay">
+        <img src="{{ url_for('static', filename='images/about.jpg') }}" width="520px" height="420px" >
+      </div>  
+
+    </section>
+
+
+<footer>
+        <div class="footer-content">
+          <p>&copy; 2023 RiskWatch. All rights reserved.</p>
+        </div>
+</footer> 
+
+  
+  </body>
+</html>

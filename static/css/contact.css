@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    min-height: 45vh;
+    display: flex;
+    background-color: rgb(52, 52, 124);
+    flex-wrap: wrap;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background: rgb(52, 52, 124);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  z-index: 99;
+}
+
+.welcome{
+  margin: auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    user-select: none;
+    font-weight: 550;
+    text-decoration: none;
+    margin: 0;
+    width: auto;
+    padding: 10px;
+}
+
+.navigation .home,
+.navigation .contact {
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  background: url("../images/contact.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+  
+  .banner .block {
+    padding: 200px 0px 160px;
+  }
+  
+  .banner .block h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    text-transform: capitalize;
+    color: rgb(52, 52, 124);
+  }
+
+  .banner .block p{
+    color: rgb(52, 52, 124);
+    padding-left: 20px;
+    font-size: 17px;
+  }
+  
+  .letter-spacing {
+    letter-spacing: 2px;
+  }
+  
+  .text-color {
+    color: rgb(52, 52, 124);
+  }
+
+.features {
+    margin-top: -90px;
+    padding-left: 6%;
+    z-index: 1;
+  }
+  
+  .feature-item {
+    flex-basis: 80%;
+    margin: 0px 20px;
+    padding: 30px 30px;
+    background-color: #fff;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 30px 0px rgba(52, 52, 124, 0.5);
+    z-index: 1;
+  }
+  
+  .feature-item .feature-icon i {
+    font-size: 50px;
+    color: rgb(52, 52, 124);
+  }
+  
+  .feature-item h4 {
+    color: rgb(52, 52, 124);
+    font-size: 20px;
+  }
+  
+  .feature-item p {
+    font-size: 18px;
+  }
+
+  .feature-item a {
+    color: rgb(52, 52, 124);
+    text-decoration: none;
+  }
+  
+  .feature-section.border-top {
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+/*
+footer {
+    color: #0e0e62;
+    width: 100%;
+    position:relative; 
+}
+  
+.footer-content {
+    clear: both;
+    justify-content: center;
+    text-align: center;
+}
+*/
+

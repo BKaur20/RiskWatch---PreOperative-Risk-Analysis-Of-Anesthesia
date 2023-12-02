@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RiskWatch</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/patient.css') }}">
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <header>
+      <a href="{{ url_for('index') }}">
+      <h2 class="welcome"><img src="{{ url_for('static', filename='images/logo.jpg') }}" width="230" height="60"></h2>
+      </a>
+    <nav class="navigation">
+      <a class="home" href="{{ url_for('index') }}">Home</a>
+        <a class="contact"href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+  </header>
+
+  <body>
+    <section class="section-plans" id="section-plans">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          Separating Myths from Facts: Unveiling the Truth
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front-1">
+              <img src="{{ url_for('static', filename='images/myth5.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--1">
+                <h4 class="card__heading">Myth</h4>
+              </div>
+              <div class="card__details">
+                <p>Once the surgery commences, anesthesiologists depart from the operating room.</p>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <img src="{{ url_for('static', filename='images/myth5.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--1">
+                <h4 class="card__heading">Fact</h4>
+              </div>
+              <div class="card__cta">
+                <div class="card__details">
+                  <p>Anesthesiologists remain present throughout surgery, diligently monitoring vital signs. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front-2">
+              <img src="{{ url_for('static', filename='images/myth2.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--2">
+                <h4 class="card__heading">Myth</h4>
+              </div>
+              <div class="card__details">
+                <p>The anesthesia may wear off before the surgery is completed.</p>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <img src="{{ url_for('static', filename='images/myth2.jpg') }}"alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--2">
+                <h4 class="card__heading">Fact</h4>
+              </div>
+              <div class="card__cta">
+                <div class="card__details">
+                  <p>It is unlikely for the anesthesia to wear off before surgery completion unless not analyzed properly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front-3">
+              <img src="{{ url_for('static', filename='images/myth3.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--3">
+                <h4 class="card__heading">Myth</h4>
+              </div>
+              <div class="card__details">
+                <p>The risk associated with anesthesia is lower for minor surgeries.</p>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-3">
+              <img src="{{ url_for('static', filename='images/myth3.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--2">
+                <h4 class="card__heading">Fact</h4>
+              </div>
+              <div class="card__cta">
+                <div class="card__details">
+                  <p>The outcome of anesthesia is influenced by multiple factors out of one is the type of surgery.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front-1">
+              <img src="{{ url_for('static', filename='images/myth4.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--1">
+                <h4 class="card__heading">Myth</h4>
+              </div>
+              <div class="card__details">
+                <p>Adverse events during surgery can occur only as a result of an excessive administration of anesthesia.</p>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <img src="{{ url_for('static', filename='images/myth4.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--1">
+                <h4 class="card__heading">Fact</h4>
+              </div>
+              <div class="card__cta">
+                <div class="card__details">
+                  <p>The adverse outcome of surgery can be attributed to various factors, including patient's general condition.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front-2">
+              <img src="{{ url_for('static', filename='images/myth1.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--2">
+                <h4 class="card__heading">Myth</h4>
+              </div>
+              <div class="card__details">
+                <p>Not taking anesthesia and tolerating pain will help you heal faster.</p>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <img src="{{ url_for('static', filename='images/myth1.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--2">
+                <h4 class="card__heading">Fact</h4>
+              </div>
+              <div class="card__cta">
+                <div class="card__details">
+                  <p>Patients advantages from the pain relief offered by anesthesia during and after surgery.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front-3">
+              <img src="{{ url_for('static', filename='images/myth6.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--3">
+                <h4 class="card__heading">Myth</h4>
+              </div>
+              <div class="card__details">
+                <p>You might reveal something personal.</p>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-3">
+              <img src="{{ url_for('static', filename='images/myth6.jpg') }}" alt="Surgery Image" class="card__image">
+              <div class="card__title card__title--2">
+                <h4 class="card__heading">Fact</h4>
+              </div>
+              <div class="card__cta">
+                <div class="card__details">
+                  <p>Patients usually experience confusion or laughter under its effects and are typically not able to share anything intriguing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          "The primary concern lies not in the procedure itself, but rather in the potential risks associated with anesthesia."
+        </h2>
+      </div>
+      <img src="{{ url_for('static', filename='images/news.jpg') }}" alt="News Image" class="image">
+    </section>
+  </body>
+</html>

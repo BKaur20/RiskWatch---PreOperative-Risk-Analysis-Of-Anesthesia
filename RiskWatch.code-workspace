@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../FinalYearProject"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "RiskWatch"
+	}
+}

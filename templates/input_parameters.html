@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RiskWatch</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/input_parameters.css') }}">
+
+
+    <script>
+      function validateForm() {
+        var disclaimerCheckbox = document.getElementById("disclaimer");
+        if (!disclaimerCheckbox.checked) {
+          alert("You must accept the disclaimer before proceeding.");
+          return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+      }
+    </script>
+    
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <header>
+      <a href="{{ url_for('index') }}">
+        <h2 class="welcome"><img src="{{ url_for('static', filename='images/logo.jpg') }}" width="230" height="60"></h2>
+      </a>
+        <nav class="navigation">
+        <a class="home" href="{{ url_for('index') }}">Home</a>
+        <a class="contact"href="{{ url_for('contact') }}">Contact</a>
+        <a class="logout" href="{{ url_for('logout') }}">Logout</a>
+
+      </nav>
+    </header>
+
+    <div class="container">
+
+      <form action="{{ url_for('input_parameters') }}" method="POST" onsubmit="return validateForm()">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Input Patient Parameters</span>
+            <div class="fields">
+              
+              <div class="input-field">
+                <label>Patient ID</label>
+                <input id="patient_id" name="patient_id" type="text" placeholder="Patient ID" required>
+              </div>
+
+              <!--
+                <div class="input-field">
+                <label>Gender</label>
+                <input type="text" placeholder="Gender" required>
+              </div>
+              -->
+              
+              <div class="input-field">
+                <label for="gender">Gender</label>
+               <!-- <input type="text" placeholder="Gender" required>-->
+
+              <select id="gender" name="gender">
+                <option value="gender">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="preferNotToSay">Prefer Not to say</option>
+              </select>
+            </div>
+              
+              <div class="input-field">
+                <label>Age</label>
+                <input id="age" name="age" type="number" placeholder="Age" required>
+              </div>
+              
+              <div class="input-field">
+                <label>BMI</label>
+                <input id="bmi" name="bmi" type="number" placeholder="BMI" required step="0.1">
+              </div>
+              
+              <div class="input-field">
+                <label>ASA Type</label>
+                <input id="name" name="asa" type="number" placeholder="ASA Type" required>
+              </div>
+              
+              <div class="input-field">
+                <label>ECG</label>
+                <!--<input type="text" placeholder="ECG" required>-->
+
+                <select id ="preop_ecg" name="preop_ecg">
+                  <option value="ecg">Select ECG</option>
+                  <option value="normal" >Normal Sinus Rhythm</option>
+                  <option value="other">Other</option>
+                </select>
+
+              </div>
+              
+              <div class="input-field">
+                <label>Hemoglobin</label>
+                <input id="preop_hb" name="preop_hb" type="number" placeholder="Hb" required step="0.1">
+              </div>
+              
+              <div class="input-field">
+                <label>Diabetes</label>
+                <input id="preop_dm" name="preop_dm" type="number" placeholder="Diabetes" required>
+              </div>
+
+              <div class="input-field">
+                <label>Hypertension</label>
+                <input id="preop_htn" name="preop_htn" type="number" placeholder="Hypertension" required>
+              </div>
+              
+              <div class="input-field">
+                <label>Creatinine</label>
+                <input id="preop_cr" name="preop_cr" type="number" placeholder="Creatinine" required step=".01">
+              </div>
+ 
+              <div class="input-field">
+                <label>APTT</label>
+                <input id="preop_aptt" name="preop_aptt" type="number" placeholder="APTT" required step="0.1">
+              </div>
+              
+              <button type="submit" >Evaluate Risk </button>
+              
+              <div class="Disclaimer">
+                <input type="checkbox" id="disclaimer" required>
+                <label for="disclaimer">I have read and accept the disclaimer</label>
+                <p><b>Disclaimer:</b> RiskWatch estimates the Preoperative Anesthesia Risk. The risk is estimated based upon information the patient gives to the healthcare provider about prior health history. The estimates are calculated using data from a large number of patients who had parameters similar to the one the patient may have.
+                  Please note the risk level provided to you by this RiskWatch are only estimates. The risk estimate only takes certain information into account. There may be other factors that are not included in the estimate which may increase or decrease the risk of a complication or death. These estimates are not guarantee of results. A complication after surgery may happen even if the risk is low. This information is not intended to replace the advice of a doctor or healthcare provider about the diagnosis, treatment, or potential outcomes. RiskWatch is not responsible for medical decisions that may be made based on the risk estimates, since these estimates are provided for informational purposes. 
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div> 
+      </form>
+    </div>
+   
+
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2023 RiskWatch. All rights reserved.</p>
+        </div>
+    </footer> 
+  </body>
+</html>  
