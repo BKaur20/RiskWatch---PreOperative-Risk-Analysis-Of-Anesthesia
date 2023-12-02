@@ -210,7 +210,7 @@ def register():
     return render_template('register.html', form=form)
 """
 
-with open(f'backend/grav.pickle', 'rb') as f:
+with open(f'backend/ensemble.pickle', 'rb') as f:
     model = pickle.load(f)
 with open(f'backend/datapreprocessing.pickle', 'rb') as f:
     func = pickle.load(f)
