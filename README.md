@@ -41,6 +41,8 @@ RiskWatch is an invaluable tool that enhances the preoperative risk analysis of 
 
 For a thorough understanding of the working, check out!
 
+![Work Structure](screenshots/Model.png)
+
 [Research on RiskWatch](https://linktodocumentation)
 
 
