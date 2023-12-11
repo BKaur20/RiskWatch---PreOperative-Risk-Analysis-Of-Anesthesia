@@ -40,7 +40,7 @@ class Users(db.Model,UserMixin):
     registeration_no=db.Column(db.String(40), nullable=False)
 
 class Patient(db.Model,UserMixin):
-    p_id = db.Column(db.String(10), primary_key=True)
+    p_id = db.Column(db.String(10))
     p_gender = db.Column(db.String(10), nullable=False)
     p_age = db.Column(db.Integer, nullable=False)
     p_bmi = db.Column(db.Integer, nullable=False)
