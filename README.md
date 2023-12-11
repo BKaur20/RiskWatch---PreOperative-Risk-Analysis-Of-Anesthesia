@@ -46,6 +46,17 @@ For a thorough understanding of the working, check out!
 [Research on RiskWatch](https://linktodocumentation)
 
 
+## Results
+
+Accuracy Scores: 
+
+![Accuracy](screenshots/Accuracy.png)
+
+Ranking the models by TOPSIS:
+
+![Topsis](screenshots/Topsis.png)
+
+
 ## Deployment
 
 To deploy this project, run
