@@ -87,7 +87,7 @@ def login_register():
                 new_user = Users(username=username, password=hashed_password,name=name,email=email,mobile_no=mobile_no,registeration_no=registeration_no)
                 db.session.add(new_user)
                 db.session.commit()
-                flash('Registration successful!')
+                error = 'Registration successful!'
             return render_template('login_register.html',error=error,action=action)
             
 
